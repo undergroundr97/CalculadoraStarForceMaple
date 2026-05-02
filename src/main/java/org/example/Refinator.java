@@ -35,6 +35,7 @@ public class Refinator {
                 failureChance = 722;
                 destroyChance = 130;
                 enhance(equip, successChance,failureChance,destroyChance);
+                break;
             case 22:
                 successChance = 150;
                 failureChance = 680;
@@ -46,12 +47,14 @@ public class Refinator {
                 failureChance = 720;
                 destroyChance = 180;
                 enhance(equip, successChance,failureChance,destroyChance);
+                break;
 
             case 24:
                 successChance = 100;
                 failureChance = 720;
                 destroyChance = 180;
                 enhance(equip, successChance,failureChance,destroyChance);
+                break;
             default:
                 System.out.println("Item out of bounds");
                 break;
@@ -101,6 +104,7 @@ public class Refinator {
             System.out.println("Destroyed");
             System.out.println("Number was: " + randomStarForceNumber);
         }
+       System.out.println("Current Starforce level: " + equip.getItemLevel());
         String nextline = scanner.nextLine();
     }
 

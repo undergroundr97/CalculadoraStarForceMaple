@@ -9,6 +9,6 @@ public class Main {
        while(!equip.getDestroyed())
             Refinator.refineEquip(equip);
             System.out.println("Press enter to continue");
-            String enter = scanner.nextLine();
+//            String enter = scanner.nextLine();
         };
 }
