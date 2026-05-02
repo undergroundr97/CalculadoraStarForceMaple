@@ -2,7 +2,7 @@ package org.example;
 
 public class Equip {
     private static Integer numberOfEquipmentsUsed = 1;
-    private Integer itemLevel = 18;
+    private Integer itemLevel = 21;
     private Boolean destroyed = false;
 
 //    public Equip() {
