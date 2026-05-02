@@ -55,8 +55,11 @@ public class Refinator {
             default:
                 System.out.println("Item out of bounds");
                 break;
-
-
+            case 25:
+                successChance = 1000;
+                failureChance = 7200;
+                destroyChance = 1800;
+                enhance(equip, successChance,failureChance,destroyChance);
         }
     }
 
