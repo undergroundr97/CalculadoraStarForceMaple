@@ -33,6 +33,7 @@ public class Refinator {
                 failureChance = 7225;
                 destroyChance = 1275;
                 enhance(equip, successChance,failureChance,destroyChance);
+                break;
             case 22:
                 successChance = 1500;
                 failureChance = 6800;
@@ -52,14 +53,15 @@ public class Refinator {
                 destroyChance = 1800;
                 enhance(equip, successChance,failureChance,destroyChance);
                 break;
-            default:
-                System.out.println("Item out of bounds");
-                break;
             case 25:
                 successChance = 1000;
                 failureChance = 7200;
                 destroyChance = 1800;
                 enhance(equip, successChance,failureChance,destroyChance);
+                break;
+            default:
+                System.out.println("Item out of bounds");
+                break;
         }
     }
 
@@ -73,17 +75,17 @@ public class Refinator {
        ArrayList<Integer> destroyNumbers = new ArrayList<>();
 
        for (int i = 0; i < successChance ; i++) {
-           int randomNumberFromArray = (int) Math.floor(Math.random() * numbersTo999.toArray().length);
+           int randomNumberFromArray = (int) Math.floor(Math.random() * numbersTo999.size());
            succesNumbers.add(numbersTo999.get(randomNumberFromArray));
            numbersTo999.remove(randomNumberFromArray);
        }
        for (int i = 0; i < failureChance ; i++) {
-           int randomNumberFromArray = (int) Math.floor(Math.random() * numbersTo999.toArray().length);
+           int randomNumberFromArray = (int) Math.floor(Math.random() * numbersTo999.size());
            failureNumbers.add(numbersTo999.get(randomNumberFromArray));
            numbersTo999.remove(randomNumberFromArray);
        }
        for (int i = 0; i < destroyChance ; i++) {
-           int randomNumberFromArray = (int) Math.floor(Math.random() * numbersTo999.toArray().length);
+           int randomNumberFromArray = (int) Math.floor(Math.random() * numbersTo999.size());
            destroyNumbers.add(numbersTo999.get(randomNumberFromArray));
            numbersTo999.remove(randomNumberFromArray);
        }
@@ -95,15 +97,15 @@ public class Refinator {
        if(succesNumbers.contains(randomStarForceNumber)){
            equip.increaseItemLevel();
            System.out.println(" wwwwwww Success wwwwwww");
-           System.out.println("Number was: " + randomStarForceNumber);
+//           System.out.println("Number was: " + randomStarForceNumber);
        } else if (failureNumbers.contains(randomStarForceNumber)) {
            System.out.println(" ------- Failure -------");
-           System.out.println("Number was: " + randomStarForceNumber);
+//           System.out.println("Number was: " + randomStarForceNumber);
        } else {
            equip.increaseNumberOfEquipmentsUsed();
            equip.destroyEquip();
            System.out.println(" xxxxxxxx Destroyed xxxxxxxx");
-           System.out.println("Number was: " + randomStarForceNumber);
+//           System.out.println("Number was: " + randomStarForceNumber);
        }
        System.out.println("Current Starforce level: " + equip.getItemLevel());
 //       System.out.println("Number of items in this sessions: " + equip.getNumberOfEquipmentsUsed());
