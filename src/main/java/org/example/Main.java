@@ -6,9 +6,13 @@ public class Main {
     static void main() {
         Scanner scanner = new Scanner(System.in);
         Equip equip = new Equip();
-       while(!equip.getDestroyed())
+        String confirm = "";
+        do {
+            if (equip.getDestroyed()){
+                equip = new Equip();
+            }
             Refinator.refineEquip(equip);
-            System.out.println("Press enter to continue");
-//            String enter = scanner.nextLine();
-        };
+             confirm = scanner.nextLine();
+        } while (!confirm.equals("n"));
+    }
 }
