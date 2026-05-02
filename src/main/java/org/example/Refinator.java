@@ -16,6 +16,42 @@ public class Refinator {
                 destroyChance = 68;
                 enhance(equip, successChance,failureChance,destroyChance);
                 break;
+            case 19:
+                successChance = 150;
+                failureChance = 765;
+                destroyChance = 85;
+                enhance(equip, successChance,failureChance,destroyChance);
+                break;
+            case 20:
+                successChance = 30;
+                failureChance = 595;
+                destroyChance = 105;
+                enhance(equip, successChance,failureChance,destroyChance);
+                break;
+            case 21:
+//                como fazer o 722 virar 72.25% e o destruction virar 12.75%
+
+                successChance = 150;
+                failureChance = 722;
+                destroyChance = 130;
+                enhance(equip, successChance,failureChance,destroyChance);
+            case 22:
+                successChance = 150;
+                failureChance = 680;
+                destroyChance = 170;
+                enhance(equip, successChance,failureChance,destroyChance);
+                break;
+            case 23:
+                successChance = 100;
+                failureChance = 720;
+                destroyChance = 180;
+                enhance(equip, successChance,failureChance,destroyChance);
+
+            case 24:
+                successChance = 100;
+                failureChance = 720;
+                destroyChance = 180;
+                enhance(equip, successChance,failureChance,destroyChance);
             default:
                 System.out.println("Item out of bounds");
                 break;
