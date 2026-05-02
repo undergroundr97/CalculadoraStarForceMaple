@@ -88,10 +88,10 @@ public class Refinator {
            numbersTo999.remove(randomNumberFromArray);
        }
        int randomStarForceNumber = (int) Math.floor(Math.random() * 10000);
-       System.out.println(numbersTo999);
-       System.out.println("Success: " + succesNumbers);
-       System.out.println("Failure: "+ failureNumbers);
-       System.out.println("Destroy: " + destroyNumbers);
+//       System.out.println(numbersTo999);
+//       System.out.println("Success: " + succesNumbers);
+//       System.out.println("Failure: "+ failureNumbers);
+//       System.out.println("Destroy: " + destroyNumbers);
        if(succesNumbers.contains(randomStarForceNumber)){
            equip.increaseItemLevel();
            System.out.println(" wwwwwww Success wwwwwww");
@@ -106,7 +106,7 @@ public class Refinator {
            System.out.println("Number was: " + randomStarForceNumber);
        }
        System.out.println("Current Starforce level: " + equip.getItemLevel());
-       System.out.println("Number of items in this sessions: " + equip.getNumberOfEquipmentsUsed());
+//       System.out.println("Number of items in this sessions: " + equip.getNumberOfEquipmentsUsed());
     }
 
 }

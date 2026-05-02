@@ -1,18 +1,51 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     static void main() {
         Scanner scanner = new Scanner(System.in);
-        Equip equip = new Equip();
         String confirm = "";
-        do {
-            if (equip.getDestroyed()){
+        int iterations = 300;
+        ArrayList<Integer> resultados = new ArrayList<>();
+        for (int i = 0; i < iterations; i++) {
+            Equip equip;
+            int totalEquips = 0;
+            for (int j = 0; j < 1 ; j++) {
                 equip = new Equip();
+                while(!equip.getItemLevel().equals(22)){
+                    if (equip.getDestroyed()){
+                        totalEquips += 1;
+                        equip = new Equip();
+                    }
+                    Refinator.refineEquip(equip);
+                    System.out.println("This is iteration: " + i);
+                }
+
             }
-            Refinator.refineEquip(equip);
-             confirm = scanner.nextLine();
-        } while (!confirm.equals("n"));
+
+            resultados.add(totalEquips);
+        }
+
+//        while(!equip.getItemLevel().equals(25)){
+//            if (equip.getDestroyed()){
+//                equip = new Equip();
+//            }
+//            Refinator.refineEquip(equip);
+//        }
+        int total = 0;
+        for (Integer resultado : resultados) {
+            total += resultado;
+        }
+        System.out.println("Total de itens: " + total);
+        System.out.println("Booms avg 18-22: " + (double) total / iterations);
+//        do {
+//            if (equip.getDestroyed()){
+//                equip = new Equip();
+//            }
+//            Refinator.refineEquip(equip);
+//             confirm = scanner.nextLine();
+//        } while (!confirm.equals("n"));
     }
 }
