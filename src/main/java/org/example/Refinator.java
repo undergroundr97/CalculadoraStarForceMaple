@@ -96,18 +96,18 @@ public class Refinator {
 //       System.out.println("Destroy: " + destroyNumbers);
        if(succesNumbers.contains(randomStarForceNumber)){
            equip.increaseItemLevel();
-           System.out.println(" wwwwwww Success wwwwwww");
+//           System.out.println(" wwwwwww Success wwwwwww");
 //           System.out.println("Number was: " + randomStarForceNumber);
        } else if (failureNumbers.contains(randomStarForceNumber)) {
-           System.out.println(" ------- Failure -------");
+//           System.out.println(" ------- Failure -------");
 //           System.out.println("Number was: " + randomStarForceNumber);
        } else {
            equip.increaseNumberOfEquipmentsUsed();
            equip.destroyEquip();
-           System.out.println(" xxxxxxxx Destroyed xxxxxxxx");
+//           System.out.println(" xxxxxxxx Destroyed xxxxxxxx");
 //           System.out.println("Number was: " + randomStarForceNumber);
        }
-       System.out.println("Current Starforce level: " + equip.getItemLevel());
+//       System.out.println("Current Starforce level: " + equip.getItemLevel());
 //       System.out.println("Number of items in this sessions: " + equip.getNumberOfEquipmentsUsed());
     }
 

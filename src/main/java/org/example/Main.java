@@ -20,7 +20,7 @@ public class Main {
                         equip = new Equip();
                     }
                     Refinator.refineEquip(equip);
-                    System.out.println("This is iteration: " + i);
+//                    System.out.println("This is iteration: " + i);
                 }
 
             }
