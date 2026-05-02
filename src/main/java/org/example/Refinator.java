@@ -23,7 +23,7 @@ public class Refinator {
                 enhance(equip, successChance,failureChance,destroyChance);
                 break;
             case 20:
-                successChance = 30;
+                successChance = 300;
                 failureChance = 595;
                 destroyChance = 105;
                 enhance(equip, successChance,failureChance,destroyChance);
@@ -94,15 +94,15 @@ public class Refinator {
         System.out.println("Destroy: " + destroyNumbers);
         if(succesNumbers.contains(randomStarForceNumber)){
             equip.increaseItemLevel();
-            System.out.println("Item was Success");
+            System.out.println(" wwwwwww Success wwwwwww");
             System.out.println("Number was: " + randomStarForceNumber);
         } else if (failureNumbers.contains(randomStarForceNumber)) {
-            System.out.println("Item was Failure");
+            System.out.println(" ------- Failure -------");
             System.out.println("Number was: " + randomStarForceNumber);
         } else {
             equip.increaseNumberOfEquipmentsUsed();
             equip.destroyEquip();
-            System.out.println("Item was Destroyed");
+            System.out.println(" xxxxxxxx Destroyed xxxxxxxx");
             System.out.println("Number was: " + randomStarForceNumber);
         }
        System.out.println("Current Starforce level: " + equip.getItemLevel());
