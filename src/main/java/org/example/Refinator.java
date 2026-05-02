@@ -1,8 +1,10 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Refinator {
+    private static Scanner scanner = new Scanner(System.in);
     private static int successChance;
     private static int failureChance;
     private static int destroyChance;
@@ -63,6 +65,7 @@ public class Refinator {
             System.out.println("Destroyed");
             System.out.println("Number was: " + randomStarForceNumber);
         }
+        String nextline = scanner.nextLine();
     }
 
 }
