@@ -7,7 +7,7 @@ public class Main {
     static void main() {
         Scanner scanner = new Scanner(System.in);
         String confirm = "";
-        int iterations = 300;
+        int iterations = 1000;
         ArrayList<Integer> resultados = new ArrayList<>();
         for (int i = 0; i < iterations; i++) {
             Equip equip;
@@ -39,7 +39,10 @@ public class Main {
             total += resultado;
         }
         System.out.println("Total de itens: " + total);
-        System.out.println("Booms avg 18-22: " + (double) total / iterations);
+        System.out.println("Range of booms: " + resultados.stream().mapToInt(Integer::intValue).min().getAsInt() + " " +
+                "- " + resultados.stream().mapToInt(Integer::intValue).max().getAsInt());
+        System.out.println("Average: " + resultados.stream().mapToInt(Integer::intValue).average().getAsDouble());
+//        System.out.println("Booms avg 18-22: " + (double) total / iterations);
 //        do {
 //            if (equip.getDestroyed()){
 //                equip = new Equip();
